@@ -10,4 +10,4 @@ This is a project to build custome scheduler for efficient calendar handling.
 
 ### Acknowledgment
 1. Jyoti Harti
-2. Chirag Padubidrigit
+2. Chirag Padubidri
