@@ -1,0 +1,26 @@
+Resources:
+1. Pomodoro API 
+    a. https://github.com/jordanch/pomodoro
+    b. https://codepen.io/mesarikaya/pen/jraBqw
+
+Parameter need from input:
+1. 
+
+
+
+
+
+
+
+
+
+
+Chirag:
+
+
+
+
+
+
+
+Jyoti:
