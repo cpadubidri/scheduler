@@ -1,11 +1,11 @@
 {
     "do-not-distrb":{
-        "lunch": ["13:00:00","13:30:30"]
+        "lunch": ["13:00:00","13:30:30"],
+        "offwork":["18:00:00","09:00:00"],
+        "offday":["Saturday","Sunday"]
     },
 
-    "work-time":{
-        "work":["09:00:00","18:00:00"]
-    }
-
+    "work-time":["09:00:00","18:00:00"],
+    "work-days":["Monday","Tuesday","Wednesday","Thursday","Friday"]
 
 }
