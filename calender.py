@@ -1,12 +1,12 @@
 from gcsa.google_calendar import GoogleCalendar
-from beautiful_date import Apr, hours
+from beautiful_date import Apr, hours, May
 from gcsa.event import Event
 # import pandas as pd
 
 class GCalendar():
 
-    def __init__(self, email):
-        self.gc = GoogleCalendar(email)
+    def __init__(self, email, credentials_path='../.credentials/credentials.json'):
+        self.gc = GoogleCalendar(email, credentials_path=credentials_path)
         
 
     def get_event(self, time_min=None, time_max=None):
@@ -32,32 +32,13 @@ class GCalendar():
 
 
 
-
-          
-
-
-
-
-
-
-
 if __name__=="__main__":
-    calen = GCalendar(email='jyotiharti1@gmail.com')
+    calen = GCalendar(email='jyotiharti1@gmail.com',credentials_path='../.credentials/credentials.json')
 
-    min_time = (19/Apr/2024)[14:00]
-    max_time = (19/Apr/2024)[15:00]
+    min_time = (19/May/2024)[14:00]
+    max_time = (19/May/2024)[15:00]
     x = calen.get_event(min_time, max_time)
     print(x)
-
-    # calen.add_event()
-
-    # event_name='Test_meeting'
-    # calen.delete_event(event_name)
-    # gc = GoogleCalendar('jyotiharti1@gmail.com')
-    # # gc.delete_event('Test_meeting')
-    # for event in gc:
-    #     print(event)
-    #     gc.delete_event(event)
 
 
 
