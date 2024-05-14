@@ -8,6 +8,8 @@ class DataManager:
         Initializes the DataManager class.
         '''
         self.debug = debug
+        self.__version__ = '0.1.0'
+        self.developername = 'Jyoti'
 
     def read_file(self, path):
         '''
@@ -18,6 +20,8 @@ class DataManager:
                 return self.__readcsv__(path) # Read the CSV file
             elif path.endswith('.sql'): # Check if the file extension is .sql
                 return self.__readsql__(path) # Read the SQL file
+            elif path.endswith('.json'):
+                return self.__readjson__(path)
             else:
                 # If the file is not CSV or SQL, it's considered unsupported
                 raise ValueError('Input file type is not supported')
@@ -30,7 +34,8 @@ class DataManager:
         '''
         Reads a CSV file and returns its content.
         '''
-        pass
+        data = pd.read_csv(path)
+        return data
 
 
     def __readsql__(self, path):
@@ -38,9 +43,26 @@ class DataManager:
         Reads a SQL file and returns its content.
         '''
         pass
+    
+    def __readjson__(self, path):
+        '''
+        Read a JSON file and returns its content.
+        '''
+        data = pd.read_json(path)
+        return data
+    
+
 
 
 if __name__=='__main__':
     dh = DataManager(debug=True)
-    data = dh.read_file('assets/scheduler-dummy-data.csv') 
-    print(data)
+    # print(dh.developername)
+    # data = dh.read_file(path='assets\eventdata.csv') 
+    # print(f' Read file using read_file {len(data)}')
+
+
+    # data2 = dh.__readcsv__(path='assets\eventdata.csv', encoding='utf-16')
+    # print(f' Read file using read_csv {len(data)}')
+
+
+    
